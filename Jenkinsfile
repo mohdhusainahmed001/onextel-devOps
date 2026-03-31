@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/mohdhusainahmed001/onextel-devOps.git>.git'
+                    url: 'https://github.com/mohdhusainahmed001/onextel-devOps.git'
             }
         }
 
