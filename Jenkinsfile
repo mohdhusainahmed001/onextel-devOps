@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3'   // Name must match the Maven installation configured in Jenkins
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -11,13 +15,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'   // Replace with your build tool
+                sh 'mvn clean install'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'            // Replace with your test command
+                sh 'mvn test'
             }
         }
 
